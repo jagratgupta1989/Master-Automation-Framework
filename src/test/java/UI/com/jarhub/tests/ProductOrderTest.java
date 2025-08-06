@@ -1,4 +1,4 @@
-package com.jarhub.tests;
+package UI.com.jarhub.tests;
 
 import com.jarhub.pages.*;
 import io.qameta.allure.Description;

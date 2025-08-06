@@ -1,4 +1,4 @@
-package com.jarhub.tests;
+package UI.com.jarhub.tests;
 
 import com.jarhub.driver.Driver;
 import com.jarhub.enums.ConfigProperties;

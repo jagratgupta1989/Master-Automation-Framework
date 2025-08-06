@@ -6,13 +6,13 @@
     <!-- Registering a custom TestNG listener -->
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-        <listener class-name="com.jarhub.listeners.Listener"/>
+        <listener class-name="UI.com.jarhub.listeners.Listener"/>
     </listeners>
 
     <test name="Functional Tests">
             <classes>
-                <class name="com.jarhub.tests.LoginTest"/>
-<!--                <class name="com.jarhub.tests.ProductOrderTest"/>-->
+                <class name="UI.com.jarhub.tests.LoginTest"/>
+                <class name="UI.com.jarhub.tests.ProductOrderTest"/>
             </classes>
     </test>
 

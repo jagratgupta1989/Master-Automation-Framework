@@ -1,4 +1,4 @@
-package com.jarhub.tests;
+package UI.com.jarhub.tests;
 
 import com.jarhub.pages.LoginPage;
 import io.qameta.allure.*;
