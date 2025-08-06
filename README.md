@@ -1,6 +1,7 @@
 # Master-Automation-Framework
 This Repository is used to develop industry level framework.
 📁 **Folder Structure (UI + API Automation Ready in Java)**
+
 MasterAutomationFramework/
 │── .allure
 ├── .idea
