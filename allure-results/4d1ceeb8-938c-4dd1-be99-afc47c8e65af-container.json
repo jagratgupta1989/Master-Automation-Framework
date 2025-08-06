@@ -1,0 +1,1 @@
+{"uuid":"4d1ceeb8-938c-4dd1-be99-afc47c8e65af","name":"com.jarhub.tests.BaseTest.setUp","children":["b61ff9d1-1f58-4594-b8e7-a90bce6a00c9"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1754475289007,"stop":1754475293646}],"afters":[],"start":1754475289007,"stop":1754475293646}
