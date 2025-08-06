@@ -2,6 +2,29 @@
 This Repository is used to develop industry level framework.
 📁 **Folder Structure (UI + API Automation Ready in Java)**
 
+selenium-framework/
+│
+├── .gitignore
+├── README.md
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── base/
+│   │   │       └── BaseTest.java
+│   │   └── resources/
+│   │       └── config.properties
+│   └── test/
+│       ├── java/
+│       │   ├── ui/
+│       │   │   └── LoginUITest.java
+│       │   └── api/
+│       │       └── LoginAPITest.java
+│       └── resources/
+│           └── testng.xml
+
+
+
 MasterAutomationFramework/
 │── .allure
 ├── .idea
