@@ -11,16 +11,17 @@ public final class FrameWorkConstants {
     }
     private static final String RESOURCEPATH=System.getProperty("user.dir")+"/src/test/resources";
     private static final String CONFIGFILEPATH=RESOURCEPATH+"/config/config.properties";
+    private static final String EXCELFILEPATH=RESOURCEPATH+"/excel/testdata.xlsx";
     private static final int IMPLICITWAIT=10;
     private static final int EXPLICITWAIT=10;
     private static final String EXTENTREPORTFOLDERPATH=System.getProperty("user.dir")+"/extent-test-output";
     private static String extentReportFilePath="";
 
 
-    public static String getConfigFilePath()
-    {
-        return CONFIGFILEPATH;
-    }
+        public static String getConfigFilePath()
+        {
+            return CONFIGFILEPATH;
+        }
 
     public static int getImplicitWait()
     {
@@ -48,5 +49,9 @@ public final class FrameWorkConstants {
         else {
             return EXTENTREPORTFOLDERPATH+"/"+"index.html";
         }
+    }
+    public static String getExcelpath()
+    {
+        return EXCELFILEPATH;
     }
 }
