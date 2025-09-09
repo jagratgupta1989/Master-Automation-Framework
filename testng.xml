@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="Automation Test Suite" verbose="1" parallel="false">
-
+<suite name="Automation Test Suite" parallel="classes" thread-count="2">
     <!-- Registering a custom TestNG listener -->
     <listeners>
 <!--        <listener class-name="UI.com.jarhub.listeners.AnnotationTransformer"/>-->
@@ -12,9 +11,8 @@
 
     <test name="Functional Tests">
             <classes>
-<!--                <class name="UI.com.jarhub.tests.LoginTest"/>-->
+                <class name="UI.com.jarhub.tests.LoginTest"/>
                 <class name="UI.com.jarhub.tests.ProductOrderTest"/>
             </classes>
     </test>
-
 </suite>
