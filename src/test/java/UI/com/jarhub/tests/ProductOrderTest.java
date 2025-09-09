@@ -1,5 +1,6 @@
 package UI.com.jarhub.tests;
 
+import UI.com.jarhub.listeners.RetryAnalyzer;
 import com.jarhub.pages.*;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -20,7 +21,7 @@ public final class ProductOrderTest extends BaseTest{
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test Description: Product Order Functionality.")
     @Step("Product Order Functionality Test")
-    @Test(description = "Verify Product Order Functionality")
+    @Test(description = "Verify Product Order Functionality",retryAnalyzer = RetryAnalyzer.class)
     public void productOrderTest() throws Exception {
         loginTest.loginTest();
         dashBoardPage.clickOnAddCartButton("iphone 13 pro");
