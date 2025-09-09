@@ -28,6 +28,9 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
         <configuration>
+<!--          We can set this also for parallel execution-->
+<!--          <parallel>methods</parallel>-->
+<!--          <threadCount>5</threadCount>-->
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
