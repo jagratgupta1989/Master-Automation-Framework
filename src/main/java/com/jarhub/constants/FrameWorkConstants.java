@@ -18,7 +18,12 @@ public final class FrameWorkConstants {
     private static String extentReportFilePath="";
 
 
-        public static String getConfigFilePath()
+    public static String getResourcePath()
+    {
+        return RESOURCEPATH;
+    }
+
+    public static String getConfigFilePath()
         {
             return CONFIGFILEPATH;
         }

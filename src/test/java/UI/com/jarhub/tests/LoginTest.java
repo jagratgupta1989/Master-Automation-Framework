@@ -1,29 +1,30 @@
 package UI.com.jarhub.tests;
 
+import com.jarhub.constants.FrameWorkConstants;
 import com.jarhub.pages.LoginPage;
-import com.jarhub.utils.ExcelUtils;
+import com.jarhub.utils.JsonUtils;
 import io.qameta.allure.*;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
-import java.util.List;
-import java.util.Map;
 
 @Epic("Login Module")
 @Feature("Valid Login")
 public final class LoginTest extends BaseTest{
 
     LoginPage loginPage=new LoginPage();
-    ExcelUtils excelUtils=new ExcelUtils();
+    JsonUtils jsonUtils;
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Test Description: Login with valid user and password.")
-    @Story("User logs in with valid credentials")
-    @Step("Login Functionality Test")
-    @Test(description = "Verify user login with valid credentials")
+    @Description("Test Description: Login with valid user and password. Also Check Title")
+    @Story("User logs in with valid credentials and check title")
+    @Step("Login Functionality and Title Check Test")
+    @Test(description = "Verify user login with valid credentials and check title")
     public void loginTest() throws Exception {
-        List<Map<String,String>> data = excelUtils.getTestDetails("TestData");
-        loginPage.enterEmail(data.get(0).get("email")).enterPassword(data.get(0).get("password")).clickLoginButton();
+        loginPage.enterEmail("qalearningrepository@gmail.com").enterPassword("Renu@17061989").clickLoginButton();
         Allure.step("Login Test Passed");
+        Assertions.assertThat(loginPage.getTitle()).describedAs("Title Validation")
+                .isEqualTo("Let's Shop");
+        Allure.step("Title Check Test Passed");
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -39,12 +40,17 @@ public final class LoginTest extends BaseTest{
         Allure.step("Logout Test Passed");
     }
 
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Test Description: Title Check Functionality.")
-    @Step("Title Check Functionality Test")
-    @Test(description = "Verify Title Check Functionality")
-    public void titleCheckTest()
-    {
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Login with valid user and password with Json Driven. Also Check Title")
+    @Story("User logs in with valid credentials and check title")
+    @Step("Login Functionality and Title Check Test with Json Driven")
+    @Test(description = "Verify user login with valid credentials and check title with Json Driven")
+    public void loginTestWithJson() throws Exception {
+        jsonUtils=new JsonUtils(FrameWorkConstants.getResourcePath()+"/jsons/login.json");
+        loginPage.enterEmail(jsonUtils.getNestedValue("credentials","username"))
+                .enterPassword(jsonUtils.getNestedValue("credentials","password"))
+                .clickLoginButton();
+        Allure.step("Login Test Passed");
         Assertions.assertThat(loginPage.getTitle()).describedAs("Title Validation")
                 .isEqualTo("Let's Shop");
         Allure.step("Title Check Test Passed");

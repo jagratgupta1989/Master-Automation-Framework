@@ -23,7 +23,7 @@ public final class ProductOrderTest extends BaseTest{
     @Test(description = "Verify Product Order Functionality")
     public void productOrderTest() throws Exception {
         loginTest.loginTest();
-        dashBoardPage.clickOnAddCartButton("IPHONE 13 PRO");
+        dashBoardPage.clickOnAddCartButton("iphone 13 pro");
         Thread.sleep(4000);
         dashBoardPage.clickCartButton();
         Assertions.assertThat(cartPage.getAddedItemText()).describedAs("Added Cart Item Validation")
