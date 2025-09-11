@@ -1,0 +1,14 @@
+{
+  "accuracy": 50,
+  "name": "AHouse",
+  "phone_number": "(+91) 983 839 3937",
+  "address" : "AHouse",
+  "location" :
+  {
+    "lat" : -38.38,
+    "lng" :  38.39
+  },
+  "types" : ["shoe","shop"],
+  "website" : "http://google.com",
+  "language" : "French-IN"
+}

@@ -9,10 +9,15 @@
         <listener class-name="UI.com.jarhub.listeners.Listener"/>
     </listeners>
 
-    <test name="Functional Tests">
-            <classes>
-                <class name="UI.com.jarhub.tests.LoginTest"/>
-                <class name="UI.com.jarhub.tests.ProductOrderTest"/>
-            </classes>
+<!--    <test name="Functional UI Tests">-->
+<!--            <classes>-->
+<!--                <class name="UI.com.jarhub.tests.LoginTest"/>-->
+<!--&lt;!&ndash;                <class name="UI.com.jarhub.tests.ProductOrderTest"/>&ndash;&gt;-->
+<!--            </classes>-->
+<!--    </test>-->
+    <test name="Functional API Tests">
+        <classes>
+            <class name="API.com.jarhub.tests.CrudEndToEnd"/>
+        </classes>
     </test>
 </suite>

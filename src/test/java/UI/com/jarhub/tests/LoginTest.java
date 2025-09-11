@@ -18,7 +18,7 @@ public final class LoginTest extends BaseTest{
     @Description("Test Description: Login with valid user and password. Also Check Title")
     @Story("User logs in with valid credentials and check title")
     @Step("Login Functionality and Title Check Test")
-    @Test(description = "Verify user login with valid credentials and check title")
+    @Test(description = "Verify user login with valid credentials and check title", priority = 1)
     public void loginTest() throws Exception {
         loginPage.enterEmail("qalearningrepository@gmail.com").enterPassword("Renu@17061989").clickLoginButton();
         Allure.step("Login Test Passed");
@@ -31,7 +31,7 @@ public final class LoginTest extends BaseTest{
     @Description("Test Description: Logout Functionality.")
     @Story("User logged out from Application")
     @Step("Logout Functionality Test")
-    @Test(description = "Verify user logout functionality")
+    @Test(description = "Verify user logout functionality",priority = 2)
     public void logoutTest() throws Exception {
         String label = loginPage.enterEmail("qalearningrepository@gmail.com").enterPassword("Renu@17061989").clickLoginButton()
                 .clickLogoutButton().getLogInLable();
@@ -44,7 +44,7 @@ public final class LoginTest extends BaseTest{
     @Description("Test Description: Login with valid user and password with Json Driven. Also Check Title")
     @Story("User logs in with valid credentials and check title")
     @Step("Login Functionality and Title Check Test with Json Driven")
-    @Test(description = "Verify user login with valid credentials and check title with Json Driven")
+    @Test(description = "Verify user login with valid credentials and check title with Json Driven",priority = 3)
     public void loginTestWithJson() throws Exception {
         jsonUtils=new JsonUtils(FrameWorkConstants.getResourcePath()+"/jsons/login.json");
         loginPage.enterEmail(jsonUtils.getNestedValue("credentials","username"))

@@ -8,7 +8,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
-@Listeners({AllureTestNg.class})
 public class BaseTest {
 
     protected BaseTest(){
