@@ -1,5 +1,7 @@
 package com.jarhub.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import java.io.IOException;
@@ -17,5 +19,10 @@ public class CommonUtils {
 
     public static String generateStringFromResource(String path) throws IOException {
         return new String(Files.readAllBytes(Paths.get(path)));
+    }
+
+    public static <T> T convertJsonToPojo(String json, Class<T> pojoClass) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(json, pojoClass);
     }
 }
