@@ -22,7 +22,7 @@ public class CrudEndToEnd {
     private static String placeId;
     private static APIResources apiResources;
 
-        @Severity(SeverityLevel.CRITICAL)
+        @Severity(SeverityLevel.BLOCKER)
         @Description("Test Description: Validate Add Place API")
         @Story("User validates Add Place API")
         @Step("Validate Add Place API")
