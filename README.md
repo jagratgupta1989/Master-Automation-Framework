@@ -67,7 +67,6 @@ MasterAutomationFramework/
 - TestNG
 - Maven
 - Allure & Extent Reports
-- Log4j2
 - Apache POI
 
 **🧩 Design Patterns Used**
