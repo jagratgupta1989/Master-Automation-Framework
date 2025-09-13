@@ -24,4 +24,14 @@ pipeline {
             }
         }
     }
+    post {
+            always {
+                junit '**/target/surefire-reports/*.xml'
+            }
+        }
+
+        // Publish Allure Report
+        options {
+            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+        }
 }
