@@ -18,11 +18,6 @@ pipeline {
                 bat 'mvn test'
             }
         }
-        stage('Publish Allure Report') {
-            steps {
-                allure includeProperties: false, results: [[path: 'target/allure-results']]
-            }
-        }
 
         stage('Deploy') {
             steps {
@@ -32,6 +27,8 @@ pipeline {
     }
     post {
             always {
+                echo 'Publishing Allure Report...'
+                allure includeProperties: false, results: [[path: 'target/allure-results']]
                 junit '**/target/surefire-reports/*.xml'
             }
         }
