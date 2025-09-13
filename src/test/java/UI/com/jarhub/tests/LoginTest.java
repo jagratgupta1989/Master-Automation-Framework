@@ -14,7 +14,7 @@ public final class LoginTest extends BaseTest{
     LoginPage loginPage=new LoginPage();
     JsonUtils jsonUtils;
 
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Description("Test Description: Login with valid user and password. Also Check Title")
     @Story("User logs in with valid credentials and check title")
     @Step("Login Functionality and Title Check Test")
