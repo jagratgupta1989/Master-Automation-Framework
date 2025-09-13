@@ -28,7 +28,12 @@ pipeline {
     post {
             always {
                 echo 'Publishing Allure Report...'
-                allure includeProperties: false, results: [[path: 'target/allure-results']]
+                allure(
+                            includeProperties: false,
+                            results: [[path: 'target/allure-results']],
+                            reportBuildPolicy: 'ALWAYS',
+                            commandline: 'AllureCommandline'
+                        )
                 junit '**/target/surefire-reports/*.xml'
             }
         }
