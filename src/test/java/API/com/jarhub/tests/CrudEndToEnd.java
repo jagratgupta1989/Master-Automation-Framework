@@ -1,7 +1,7 @@
 package API.com.jarhub.tests;
 
-import apiresources.APIResources;
 import com.jarhub.apipayloads.Payloads;
+import com.jarhub.apiresources.APIResources;
 import com.jarhub.constants.FrameWorkConstants;
 import com.jarhub.driver.APITestContext;
 import com.jarhub.specbuilders.RequestSpecifications;

@@ -1,4 +1,4 @@
-package apiresources;
+package com.jarhub.apiresources;
 
 public enum APIResources {
 

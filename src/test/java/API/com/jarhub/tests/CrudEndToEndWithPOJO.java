@@ -1,7 +1,7 @@
 package API.com.jarhub.tests;
 
-import apiresources.APIResources;
 import com.jarhub.apipayloads.Payloads;
+import com.jarhub.apiresources.APIResources;
 import com.jarhub.constants.FrameWorkConstants;
 import com.jarhub.driver.APITestContext;
 import com.jarhub.pojo.AddPlace;
@@ -15,7 +15,6 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
