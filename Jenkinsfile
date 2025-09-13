@@ -83,7 +83,7 @@ pipeline {
                                subject: "⚠️ Jenkins Build ${currentBuild.fullDisplayName} - No Test Results Found",
                                body: simpleBody,
                                recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                               to: 'your.email@example.com',
+                               to: 'jagratgupta5@gmail.com',
                                mimeType: 'text/html'
                            )
                        }
