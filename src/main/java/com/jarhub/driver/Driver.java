@@ -12,7 +12,6 @@ import java.util.Objects;
 
 public class Driver {
 
-    public static WebDriver driver;
     protected Driver()
     {
 
