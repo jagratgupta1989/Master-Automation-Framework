@@ -1,5 +1,6 @@
-# Master-Automation-Framework
-This Repository is used to develop industry level framework.
+🚀 MasterAutomationFramework
+
+A unified automation framework for both UI 🖥️ and API 🌐 testing, designed to be scalable, maintainable, and production-ready. This framework integrates the best industry practices with robust reporting and CI/CD support.
 📁 **Folder Structure (UI + API Automation Ready in Java)**
 
 MasterAutomationFramework/
@@ -11,9 +12,14 @@ MasterAutomationFramework/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com.jarhub/
+│   │   │       └── apipayloads/
+│   │   │          └── Payloads
+│   │   │       └── apiresources/
+│   │   │          └── APIResources
 │   │   │       └── constants/
 │   │   │          └── FrameWorkConstants
 │   │   │       └── driver/
+│   │   │          └── APITestContext
 │   │   │          └── Driver
 │   │   │          └── DriverManager
 │   │   │       └── enums/
@@ -23,6 +29,7 @@ MasterAutomationFramework/
 │   │   │          └── DriverFactory
 │   │   │          └── ExplicitWaitFactory
 │   │   │       └── logger/
+│   │   │          └── AllureLogger
 │   │   │          └── ExtentLogger
 │   │   │       └── pages/
 │   │   │          └── BasePage
@@ -31,11 +38,21 @@ MasterAutomationFramework/
 │   │   │          └── DashBoardPage
 │   │   │          └── LoginPage
 │   │   │          └── PaymentPage
+│   │   │       └── pojo/
+│   │   │          └── AddPlace
+│   │   │          └── DeletePlace
+│   │   │          └── Location
+│   │   │          └── UpdatePlace
 │   │   │       └── reports/
 │   │   │          └── ExtentManager
 │   │   │          └── ExtentReport
+│   │   │       └── specbuilders/
+│   │   │          └── RequestSpecifications
+│   │   │          └── ResponseSpecifications
 │   │   │       └── utils/
+│   │   │          └── CommonUtils
 │   │   │          └── ExcelUtils
+│   │   │          └── JsonUtils
 │   │   │          └── PropertyUtils
 │   │   │          └── ScreenshotUtils
 │   │   └── resources/
@@ -44,10 +61,14 @@ MasterAutomationFramework/
 │   └── test/
 │       ├── java/
 │       │   ├── API.com.jarhub/
-│       │   │   └── 
+│       │   │   └── BaseTest
+│       │   │   └── CrudEndToEnd
+│       │   │   └── CrudEndToEndWithPOJO
 │       │   └── UI.com.jarhub/
 │       │       └── listeners
+│       │           └── AnnotationTransformer
 │       │           └── Listener
+│       │           └── RetryAnalyzer
 │       │       └── tests
 │       │           └── BaseTest
 │       │           └── LoginTest
@@ -55,49 +76,71 @@ MasterAutomationFramework/
 │       └── resources/
 │           └── config
 │               └── config.properties
+│           └── Excel
+│               └── testdata.xlsx
+│           └── jsons
+│               └── AddPlace.json
+│               └── DeletePlace.json
+│               └── login.json
+│               └── UpdatePlace.json
 ├── .gitignore
+├── GridJenkinsfile
+├── Jenkinsfile
 ├── README.md
 ├── pom.xml
 ├── testng.xml
 
-**💻 Tech Stack**
-- Java 21
-- Selenium 4
-- Rest Assured
-- TestNG
-- Maven
-- Allure & Extent Reports
-- Apache POI
+💻 Tech Stack
+- ☕ Java 21
+- 🖱️ Selenium 4
+- 🌐 Rest Assured
+- ✅ TestNG
+- 📦 Maven
+- 📊 Allure & Extent Reports
+- 📑 Apache POI (Excel Handling)
 
-**🧩 Design Patterns Used**
-- Page Object Model (POM)
-- Factory Design Pattern 
-- Singleton for Driver Management 
-- Enum for Config Keys 
-- Listener Pattern for Logging & Screenshot
-
-
-## 🚀 Getting Started
-
-1. Clone the repo:
-```bash
-git clone https://github.com/jagratgupta1989/Master-Automation-Framework.git
-
-2. Run tests:
-mvn clean test
+✨ Features
+- 🔗 Hybrid Automation → Supports both UI & API tests in one framework.
+- 🧩 Modular Design → Page Object Model (POM) for UI + POJO for APIs.
+- 🧪 Retry & Listeners → TestNG Listeners & RetryAnalyzer integrated.
+- 📊 Rich Reporting → Allure & Extent Reports for detailed insights.
+- 🛠️ Factories & Utils → DriverFactory, WaitFactory, ExcelUtils, JsonUtils and many more.
+- 🔒 Configurable → Easy environment switching via config.properties.
+- ⚡ Parallel Execution → Enabled via TestNG + Selenium Grid.
+- 🔄 CI/CD Ready → Jenkinsfile & Grid support for pipelines.
 
 
-**🛠️ Reporting**
-Allure and Extent reports Both support this framework.
+▶️ Getting Started
+🔧 Prerequisites
+- Install Java 21+
+- Install Maven 3+
+- Install Allure CLI (for reports)
 
-**🙋‍♂️ Developed with ❤️ by:**
-Jagrat Gupta
+📥 Clone Repo
+- git clone https://github.com/jagratgupta1989/MasterAutomationFramework.git
+- cd MasterAutomationFramework
 
-**📞 Need Help or 1:1 Mentorship?**
-Let's connect via Topmate for automation consultation or framework deep dives.
+📦 Install Dependencies
+- mvn clean install
 
-**🙌 Contribution**
-Feel free to fork the repo and raise a pull request if you'd like to contribute!
+🚀 Run Tests
+- Run all tests: mvn test
+- Run with specific suite: mvn clean test -DsuiteXmlFile=testng.xml
+
+📊 Reports
+- Allure Report : allure serve allure-results
+- Extent Report : Generated under extent-test-output/ folder.
+
+🔗 CI/CD Integration
+- ✅ Ready-to-use Jenkinsfile for pipeline setup.
+- ✅ Supports Selenium Grid for distributed parallel execution.
+
+🤝 Contributing
+- Contributions are welcome! Feel free to fork, create a feature branch, and raise a PR.
+
+📬 Connect With Me
+- 💼 LinkedIn - https://www.linkedin.com/in/jagratgupta1706/
+- 🎥 YouTube – Jagrat Automation Repository
 
 
 
