@@ -70,7 +70,7 @@ pipeline {
                         subject: "✅ Jenkins Build ${currentBuild.fullDisplayName} - Allure Test Summary",
                         body: emailBody,
                         recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                        to: 'your.email@example.com',
+                        to: 'your.email@example.com',//Put your email id here
                         mimeType: 'text/html'
                     )
 
@@ -90,7 +90,7 @@ pipeline {
                         subject: "⚠️ Jenkins Build ${currentBuild.fullDisplayName} - No Test Results Found",
                         body: simpleBody,
                         recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                        to: 'jagratgupta5@gmail.com',
+                        to: 'your.email@example.com', //Put your email id here
                         mimeType: 'text/html'
                     )
                 }
