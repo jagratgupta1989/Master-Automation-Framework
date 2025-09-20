@@ -90,7 +90,7 @@ A unified automation framework for both UI 🖥️ and API 🌐 testing, designe
 ├── 📦 pom.xml
 ├── 🧾 testng.xml```
 
-💻 Tech Stack
+💻 **Tech Stack**
 - ☕ Java 21
 - 🖱️ Selenium 4
 - 🌐 Rest Assured
@@ -99,7 +99,7 @@ A unified automation framework for both UI 🖥️ and API 🌐 testing, designe
 - 📊 Allure & Extent Reports
 - 📑 Apache POI (Excel Handling)
 
-✨ Features
+✨ **Features**
 - 🔗 Hybrid Automation → Supports both UI & API tests in one framework.
 - 🧩 Modular Design → Page Object Model (POM) for UI + POJO for APIs.
 - 🧪 Retry & Listeners → TestNG Listeners & RetryAnalyzer integrated.
@@ -110,35 +110,36 @@ A unified automation framework for both UI 🖥️ and API 🌐 testing, designe
 - 🔄 CI/CD Ready → Jenkinsfile & Grid support for pipelines.
 
 
-▶️ Getting Started
-🔧 Prerequisites
+▶️ **Getting Started**
+
+🔧 **Prerequisites**
 - Install Java 21+
 - Install Maven 3+
 - Install Allure CLI (for reports)
 
-📥 Clone Repo
+📥 **Clone Repo**
 - git clone https://github.com/jagratgupta1989/MasterAutomationFramework.git
 - cd MasterAutomationFramework
 
-📦 Install Dependencies
+📦 **Install Dependencies**
 - mvn clean install
 
-🚀 Run Tests
+🚀 **Run Tests**
 - Run all tests: mvn test
 - Run with specific suite: mvn clean test -DsuiteXmlFile=testng.xml
 
-📊 Reports
+📊 **Reports**
 - Allure Report : allure serve allure-results
 - Extent Report : Generated under extent-test-output/ folder.
 
-🔗 CI/CD Integration
+🔗 **CI/CD Integration**
 - ✅ Ready-to-use Jenkinsfile for pipeline setup.
 - ✅ Supports Selenium Grid for distributed parallel execution.
 
-🤝 Contributing
+🤝 **Contributing**
 - Contributions are welcome! Feel free to fork, create a feature branch, and raise a PR.
 
-📬 Connect With Me
+📬 **Connect With Me**
 - 💼 LinkedIn - https://www.linkedin.com/in/jagratgupta1706/
 - 🎥 YouTube – Jagrat Automation Repository
 
