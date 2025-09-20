@@ -3,92 +3,92 @@
 A unified automation framework for both UI 🖥️ and API 🌐 testing, designed to be scalable, maintainable, and production-ready. This framework integrates the best industry practices with robust reporting and CI/CD support.
 📁 **Folder Structure (UI + API Automation Ready in Java)**
 
-MasterAutomationFramework/
-│── .allure
-├── .idea
-├── allure-results
-├── extent-test-output
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com.jarhub/
-│   │   │       └── apipayloads/
-│   │   │          └── Payloads
-│   │   │       └── apiresources/
-│   │   │          └── APIResources
-│   │   │       └── constants/
-│   │   │          └── FrameWorkConstants
-│   │   │       └── driver/
-│   │   │          └── APITestContext
-│   │   │          └── Driver
-│   │   │          └── DriverManager
-│   │   │       └── enums/
-│   │   │          └── ConfigProperties
-│   │   │          └── WaitStrategy
-│   │   │       └── factories/
-│   │   │          └── DriverFactory
-│   │   │          └── ExplicitWaitFactory
-│   │   │       └── logger/
-│   │   │          └── AllureLogger
-│   │   │          └── ExtentLogger
-│   │   │       └── pages/
-│   │   │          └── BasePage
-│   │   │          └── CartPage
-│   │   │          └── ConfirmationPage
-│   │   │          └── DashBoardPage
-│   │   │          └── LoginPage
-│   │   │          └── PaymentPage
-│   │   │       └── pojo/
-│   │   │          └── AddPlace
-│   │   │          └── DeletePlace
-│   │   │          └── Location
-│   │   │          └── UpdatePlace
-│   │   │       └── reports/
-│   │   │          └── ExtentManager
-│   │   │          └── ExtentReport
-│   │   │       └── specbuilders/
-│   │   │          └── RequestSpecifications
-│   │   │          └── ResponseSpecifications
-│   │   │       └── utils/
-│   │   │          └── CommonUtils
-│   │   │          └── ExcelUtils
-│   │   │          └── JsonUtils
-│   │   │          └── PropertyUtils
-│   │   │          └── ScreenshotUtils
-│   │   └── resources/
-│   │       └── archetype-resources
-│   │       └── META-INF.maven
-│   └── test/
-│       ├── java/
-│       │   ├── API.com.jarhub/
-│       │   │   └── BaseTest
-│       │   │   └── CrudEndToEnd
-│       │   │   └── CrudEndToEndWithPOJO
-│       │   └── UI.com.jarhub/
-│       │       └── listeners
-│       │           └── AnnotationTransformer
-│       │           └── Listener
-│       │           └── RetryAnalyzer
-│       │       └── tests
-│       │           └── BaseTest
-│       │           └── LoginTest
-│       │           └── ProductionOrderTest
-│       └── resources/
-│           └── config
-│               └── config.properties
-│           └── Excel
-│               └── testdata.xlsx
-│           └── jsons
-│               └── AddPlace.json
-│               └── DeletePlace.json
-│               └── login.json
-│               └── UpdatePlace.json
-├── .gitignore
-├── GridJenkinsfile
-├── Jenkinsfile
-├── README.md
-├── pom.xml
-├── testng.xml
+```MasterAutomationFramework/
+│── 📁 .allure
+├── 📁 .idea
+├── 📂 allure-results
+├── 📂 extent-test-output
+├── 📂 src/
+│   ├── 📂 main/
+│   │   ├── 📂 java/
+│   │   │   └── 📦 com.jarhub/
+│   │   │       └── 📂 apipayloads/
+│   │   │          └── 📄 Payloads
+│   │   │       └── 📂 apiresources/
+│   │   │          └── 📄 APIResources
+│   │   │       └── 📂 constants/
+│   │   │          └── ⚙️ FrameWorkConstants
+│   │   │       └── 📂 driver/
+│   │   │          └── 🚗 APITestContext
+│   │   │          └── 🚗 Driver
+│   │   │          └── 🚗 DriverManager
+│   │   │       └── 📂 enums/
+│   │   │          └── 🏷️ ConfigProperties
+│   │   │          └── 🏷️ WaitStrategy
+│   │   │       └── 📂 factories/
+│   │   │          └── 🏭 DriverFactory
+│   │   │          └── 🏭 ExplicitWaitFactory
+│   │   │       └── 📂 logger/
+│   │   │          └── 📝 AllureLogger
+│   │   │          └── 📝 ExtentLogger
+│   │   │       └── 📂 pages/
+│   │   │          └── 📄 BasePage
+│   │   │          └── 📄 CartPage
+│   │   │          └── 📄 ConfirmationPage
+│   │   │          └── 📄 DashBoardPage
+│   │   │          └── 📄 LoginPage
+│   │   │          └── 📄 PaymentPage
+│   │   │       └── 📂 pojo/
+│   │   │          └── 📄 AddPlace
+│   │   │          └── 📄 DeletePlace
+│   │   │          └── 📄 Location
+│   │   │          └── 📄 UpdatePlace
+│   │   │       └── 📂 reports/
+│   │   │          └── 📊 ExtentManager
+│   │   │          └── 📊 ExtentReport
+│   │   │       └── 📂 specbuilders/
+│   │   │          └── 📐 RequestSpecifications
+│   │   │          └── 📐 ResponseSpecifications
+│   │   │       └── 📂 utils/
+│   │   │          └── 🔧 CommonUtils
+│   │   │          └── 🔧 ExcelUtils
+│   │   │          └── 🔧 JsonUtils
+│   │   │          └── 🔧 PropertyUtils
+│   │   │          └── 🔧 ScreenshotUtils
+│   │   └── 📂 resources/
+│   │       └── 📁 archetype-resources
+│   │       └── 📁 META-INF.maven
+│   └── 📂 test/
+│       ├── 📂 java/
+│       │   ├── 📦 API.com.jarhub/
+│       │   │   └── 🧪 BaseTest
+│       │   │   └── 🧪 CrudEndToEnd
+│       │   │   └── 🧪 CrudEndToEndWithPOJO
+│       │   └── 📦 UI.com.jarhub/
+│       │       └── 📂 listeners
+│       │           └── 🔄 AnnotationTransformer
+│       │           └── 🔄 Listener
+│       │           └── 🔄 RetryAnalyzer
+│       │       └── 📂 tests
+│       │           └── 🧪 BaseTest
+│       │           └── 🧪 LoginTest
+│       │           └── 🧪 ProductionOrderTest
+│       └── 📂 resources/
+│           └── ⚙️ config
+│               └── 📄 config.properties
+│           └── 📊 Excel
+│               └── 📄 testdata.xlsx
+│           └── 📂 jsons
+│               └── 📄 AddPlace.json
+│               └── 📄 DeletePlace.json
+│               └── 📄 login.json
+│               └── 📄 UpdatePlace.json
+├── 📄 .gitignore
+├── 🤖 GridJenkinsfile
+├── 🤖 Jenkinsfile
+├── 📘 README.md
+├── 📦 pom.xml
+├── 🧾 testng.xml```
 
 💻 Tech Stack
 - ☕ Java 21
