@@ -5,6 +5,9 @@ A unified automation framework for both UI 🖥️ and API 🌐 testing, designe
 
 ```MasterAutomationFramework/
 │── 📁 .allure
+├── 📁 .github
+│   ├── 📂 workflows
+│   │   ├── 📄 automation-tests.yml
 ├── 📁 .idea
 ├── 📂 allure-results
 ├── 📂 extent-test-output
@@ -108,6 +111,7 @@ A unified automation framework for both UI 🖥️ and API 🌐 testing, designe
 - 🔒 Configurable → Easy environment switching via config.properties.
 - ⚡ Parallel Execution → Enabled via TestNG + Selenium Grid.
 - 🔄 CI/CD Ready → Jenkinsfile & Grid support for pipelines.
+- 🔄 Github Actions Ready → Flowsare running via github Actions flow.
 
 
 ▶️ **Getting Started**
