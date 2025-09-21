@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="Automation Test Suite" parallel="tests" thread-count="3">
+<suite name="Automation Test Suite" parallel="classes" thread-count="2">
     <!-- Registering a custom TestNG listener -->
     <listeners>
 <!--        <listener class-name="UI.com.jarhub.listeners.AnnotationTransformer"/>-->
