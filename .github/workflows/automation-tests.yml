@@ -1,0 +1,86 @@
+name: Automation Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  automation-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up JDK
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      # Step 3: Install Chrome & ChromeDriver
+      - name: Install Chrome and ChromeDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          sudo apt-get install -y chromium-chromedriver
+
+      # Step 4: Run Automation Tests
+      - name: Run Automation Tests
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
+
+      # Step 5: Upload Extent Reports
+      - name: Upload Extent Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: extent-reports
+          path: extent-test-output/
+
+      # Step 6: Upload Allure Results (raw data)
+      - name: Upload Allure Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results/
+
+  # -------------------------------
+  # Generate & Publish Allure Report
+  # -------------------------------
+  publish-allure-report:
+    needs: automation-tests
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      # Step 1: Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Download Allure Results
+      - name: Download Allure Results
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results
+
+      # Step 3: Generate Allure Report
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@v1.7
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+
+      # Step 4: Deploy to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
