@@ -20,7 +20,7 @@ public final class LoginTest extends BaseTest{
     @Step("Login Functionality and Title Check Test")
     @Test(description = "Verify user login with valid credentials and check title", priority = 1)
     public void loginTest() throws Exception {
-        loginPage.enterEmail("qalearningrepository@gmail.com").enterPassword("Renu@17061989").clickLoginButton();
+        loginPage.enterEmail("Put your username here").enterPassword("Put your Password here").clickLoginButton();
         Allure.step("Login Test Passed");
         Assertions.assertThat(loginPage.getTitle()).describedAs("Title Validation")
                 .isEqualTo("Let's Shop");
@@ -33,7 +33,7 @@ public final class LoginTest extends BaseTest{
     @Step("Logout Functionality Test")
     @Test(description = "Verify user logout functionality",priority = 2)
     public void logoutTest() throws Exception {
-        String label = loginPage.enterEmail("qalearningrepository@gmail.com").enterPassword("Renu@17061989").clickLoginButton()
+        String label = loginPage.enterEmail("Put your username here").enterPassword("Put your Password here").clickLoginButton()
                 .clickLogoutButton().getLogInLable();
         Assertions.assertThat(label).describedAs("Log In Label Validation")
                 .isEqualTo("Log in");
