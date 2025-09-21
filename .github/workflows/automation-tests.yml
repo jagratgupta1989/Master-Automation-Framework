@@ -14,7 +14,7 @@ jobs:
     steps:
       # Step 1: Checkout repo
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Set up JDK
       - name: Set up JDK 21
@@ -38,7 +38,7 @@ jobs:
       # Step 5: Upload Extent Reports
       - name: Upload Extent Reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: extent-reports
           path: extent-test-output/
@@ -46,7 +46,7 @@ jobs:
       # Step 6: Upload Allure Results (raw data)
       - name: Upload Allure Results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results/
@@ -62,11 +62,11 @@ jobs:
     steps:
       # Step 1: Checkout repo
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Download Allure Results
       - name: Download Allure Results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: allure-results
           path: allure-results
