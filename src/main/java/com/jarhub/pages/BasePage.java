@@ -35,9 +35,10 @@ public class BasePage {
     }
 
     @Step("Element is Visible")
-    protected void validateElementVisibility(By by)
+    protected boolean validateElementVisibility(WaitStrategy waitStrategy,By by)
     {
-        DriverManager.getDriver().findElement(by).isDisplayed();
+        ExplicitWaitFactory.explicitWaitFactory(waitStrategy,by);
+       return DriverManager.getDriver().findElement(by).isDisplayed();
     }
     @Step("Element is Enable")
     protected void validateElementEnability(By by)

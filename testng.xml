@@ -11,6 +11,7 @@
 
     <test name="Functional UI Tests">
             <classes>
+                <class name="UI.com.jarhub.tests.RegistrationTest"/>
                 <class name="UI.com.jarhub.tests.LoginTest"/>
                 <class name="UI.com.jarhub.tests.ProductOrderTest"/>
             </classes>

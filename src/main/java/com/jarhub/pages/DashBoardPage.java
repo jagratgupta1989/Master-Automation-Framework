@@ -8,6 +8,7 @@ public final class DashBoardPage extends BasePage{
 
     private static final By buttonLogout=By.xpath("//button[text()=\" Sign Out \"]");
     private static final By buttonCart=By.xpath("//button[@routerlink='/dashboard/cart']");
+    private static final By labelSuccessfulMessage=By.xpath("//h1[text()=\"Account Created Successfully\"]");
 
 
     public void clickOnAddCartButton(String itemName)
@@ -15,7 +16,7 @@ public final class DashBoardPage extends BasePage{
         DriverManager.getDriver().findElement(By.xpath("//b[text()='"+itemName+"']/../../button[2]")).click();
     }
     public LoginPage clickLogoutButton() throws Exception {
-        validateElementVisibility(buttonLogout);
+        validateElementVisibility(WaitStrategy.VISIBLE,buttonLogout);
         click(WaitStrategy.CLICKABLE,buttonLogout,"LogOut Button");
         return new LoginPage();
     }
@@ -23,6 +24,9 @@ public final class DashBoardPage extends BasePage{
         validateElementEnability(buttonCart);
         click(WaitStrategy.CLICKABLE,buttonCart,"Cart Button");
         return new CartPage();
+    }
+    public String getSuccessfulMessageDisplayed() {
+        return getLabelValue(WaitStrategy.VISIBLE,labelSuccessfulMessage);
     }
     
 }
